@@ -12,6 +12,11 @@
     "metalsmith-templates": {
       "engine": "jade",
       "directory": "./templates"
+    },
+    "metalsmith-sass": {
+      "outputStyle": "expanded",
+      "outputDir": "./contents/css/",
+      "basePath": "./sass"
     }
   }
 }
