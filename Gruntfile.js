@@ -2,6 +2,14 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
+    concurrent: {
+        target: {
+            tasks: ['watch', 'compass', 'jshint', 'metalsmith'],
+            options: {
+                logConcurrentOutput: true
+            }
+        }
+    },
     metalsmith: {
       portfolio: {
         options: grunt.file.readJSON('metalsmith.json')
@@ -16,17 +24,26 @@ module.exports = function(grunt) {
         }
       }
     },
+    compass: {
+      dist: {
+        options: {
+          config: 'config.rb'
+        }
+      }
+    },
     watch: {
-      files: ['<%= jshint.files %>'],
-      tasks: ['jshint']
-    }
+      files: ['<%= jshint.files %>', 'sass/**/*.scss'],
+      tasks: ['jshint', 'compass']
+    },
   });
 
+  grunt.loadNpmTasks('grunt-concurrent');
   grunt.loadNpmTasks('grunt-metalsmith');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-contrib-compass');
 
   grunt.registerTask('test', ['jshint']);
-  grunt.registerTask('default', ['jshint', 'metalsmith']);
+  grunt.registerTask('default', ['concurrent:target']);
 
 };

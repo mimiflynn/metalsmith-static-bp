@@ -18,6 +18,15 @@
       "outputStyle": "expanded",
       "outputDir": "./build/css/",
       "basePath": "./sass"
+    },
+    "metalsmith-collections": {
+      "articles": {
+        "sortBy": "date",
+        "reverse": true
+      }
+    },
+    "metalsmith-writemetadata": {
+      "pattern": ["*.md", "*.html"]
     }
   }
 }
