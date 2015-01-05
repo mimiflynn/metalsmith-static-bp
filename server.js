@@ -13,9 +13,11 @@ var extensions = {
   '.jpg': 'image/jpeg'
 };
 
+var ROOT_DIR = '/build/';
+
 http.createServer(function (request, response) {
-    var my_path = url.parse(request.url).pathname || 'index.html'; // set path to index.html if nothing is specified
-    var full_path = path.join(process.cwd(), my_path);
+    var my_path = url.parse(request.url).pathname || '/index.html'; // set path to index.html if nothing is specified
+    var full_path = path.join(process.cwd(), ROOT_DIR, my_path);
     var ext = path.extname(my_path);
     var mime;
 

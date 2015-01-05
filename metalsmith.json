@@ -20,13 +20,13 @@
       "basePath": "./sass"
     },
     "metalsmith-collections": {
-      "articles": {
-        "sortBy": "date",
-        "reverse": true
+      "portfolio": {
+        "pattern": "content/portfolio/*.md"
       }
     },
     "metalsmith-writemetadata": {
       "pattern": ["*.md", "*.html"]
+
     }
   }
 }

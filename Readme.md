@@ -10,6 +10,10 @@ Metalsmith
 
 `$ make build`
 
+## Grunt
+
+`grunt`
+
 ## To Do
 
 - set up compass
