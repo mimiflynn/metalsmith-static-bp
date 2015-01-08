@@ -4,9 +4,10 @@ module.exports = function(grunt) {
     pkg: grunt.file.readJSON('package.json'),
     concurrent: {
         target: {
-            tasks: ['watch', 'compass', 'jshint', 'metalsmith', 'connect:server'],
+            tasks: ['watch', 'metalsmith', 'connect:server'],
             options: {
-                logConcurrentOutput: true
+                logConcurrentOutput: true,
+                limit: 5
             }
         }
     },

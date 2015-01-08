@@ -11,7 +11,7 @@
       "relative": false
     },
     "metalsmith-templates": {
-      "engine": "jade",
+      "engine": "handlebars",
       "directory": "./templates"
     },
     "metalsmith-sass": {
