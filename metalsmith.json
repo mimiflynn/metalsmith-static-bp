@@ -10,9 +10,10 @@
       "pattern": ":title",
       "relative": false
     },
-    "metalsmith-templates": {
-      "engine": "handlebars",
-      "directory": "./templates"
+    "metalsmith-react-templates": {
+      "baseFile": "base.html",
+      "nonStatic": false,
+      "directory": "templates"
     },
     "metalsmith-sass": {
       "outputStyle": "expanded",
