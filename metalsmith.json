@@ -1,5 +1,6 @@
 {
   "source": "./contents",
+  "path": "./templates",
   "metadata": {
     "title": "My Wintersmith-Powered Blog",
     "description": "My second, super-cool, Wintersmith-powered blog."

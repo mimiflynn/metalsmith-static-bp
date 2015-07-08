@@ -4,14 +4,14 @@
   "dependencies": {
     "browserify": "^9.0.8",
     "jade": "^1.3.0",
-    "metalsmith": "^0.2.3",
     "metalsmith-collections": "^0.6.0",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.1.0",
     "metalsmith-react-templates": "^0.1.10",
     "metalsmith-sass": "^0.5.0",
     "metalsmith-writemetadata": "^0.4.2",
-    "react": "^0.13.2"
+    "react": "^0.13.2",
+    "metalsmith": "^1.7.0"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
@@ -20,7 +20,7 @@
     "grunt-contrib-compass": "^1.0.1",
     "grunt-contrib-jshint": "^0.10.0",
     "grunt-contrib-watch": "^0.6.1",
-    "grunt-metalsmith": "^1.0.0",
-    "grunt-react": "^0.12.2"
+    "grunt-react": "^0.12.2",
+    "grunt-metalsmith": "^1.0.0"
   }
 }
